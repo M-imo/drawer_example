@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class EventsPage extends StatelessWidget {
+class ExtremeProgrammingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
       child: Center(
-        child: Text("Events Page"),
+        child: Text("Extreme Programming Page"),
       ),
     );
   }

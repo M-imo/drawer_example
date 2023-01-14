@@ -26,8 +26,8 @@ class _MyHeaderDrawerState extends State<MyHeaderDrawer> {
               ),
             ),
           ),
-          Text("Fancy Cat", style: TextStyle(color: Colors.white, fontSize: 20),),
-          Text("fancy@catmail.com", style: TextStyle(color: Colors.grey[200], fontSize: 14,),),
+          Text("Agile app", style: TextStyle(color: Colors.white, fontSize: 20),),
+          Text("Fast way to learn", style: TextStyle(color: Colors.grey[200], fontSize: 14,),),
         ],
 
       ),

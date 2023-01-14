@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class ContactsPage extends StatelessWidget {
+class AgilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
       child: Center(
-        child: Text("Contacts Page"),
+        child: Text("Agile Page"),
       ),
     );
   }

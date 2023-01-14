@@ -1,11 +1,13 @@
-import 'package:drawer_example/contacts.dart';
-import 'package:drawer_example/dashboard.dart';
-import 'package:drawer_example/events.dart';
-import 'package:drawer_example/notes.dart';
-import 'package:drawer_example/notifications.dart';
-import 'package:drawer_example/privacy_policy.dart';
-import 'package:drawer_example/send_feedback.dart';
-import 'package:drawer_example/settings.dart';
+import 'package:drawer_example/PMI.ACP.dart';
+import 'package:drawer_example/agile.dart';
+import 'package:drawer_example/head_first.dart';
+import 'package:drawer_example/scrumNstandUp.dart';
+import 'package:drawer_example/project_management.dart';
+import 'package:drawer_example/azure.dart';
+import 'package:drawer_example/stakeholders_n_keystakeholders.dart';
+import 'package:drawer_example/extreme_programming.dart';
+import 'package:drawer_example/lean_kanban.dart';
+import 'package:drawer_example/spesific_requirements.dart';
 import 'package:flutter/material.dart';
 
 import 'my_header_drawer.dart';
@@ -32,32 +34,36 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  var currentPage = DrawerSections.dashboard;
+  var currentPage = DrawerSections.scrum;
 
   @override
   Widget build(BuildContext context) {
     var container;
-    if (currentPage == DrawerSections.dashboard) {
-      container = DashboardPage();
-    } else if (currentPage == DrawerSections.contacts) {
-      container = ContactsPage();
-    } else if (currentPage == DrawerSections.events) {
-      container = EventsPage();
-    } else if (currentPage == DrawerSections.notes) {
-      container = NotesPage();
-    } else if (currentPage == DrawerSections.settings) {
-      container = SettingsPage();
-    } else if (currentPage == DrawerSections.notifications) {
-      container = NotificationsPage();
-    } else if (currentPage == DrawerSections.privacyPolicy) {
-      container = PrivacyPolicyPage();
-    } else if (currentPage == DrawerSections.sendFeedback) {
-      container = SendFeedbackPage();
+    if (currentPage == DrawerSections.scrum) {
+      container = ScrumNStandUpPage();
+    } else if (currentPage == DrawerSections.agile) {
+      container = AgilePage();
+    } else if (currentPage == DrawerSections.projectManagement) {
+      container = ProjectManagementPage();
+    } else if (currentPage == DrawerSections.azure) {
+      container = AzurePage();
+    } else if (currentPage == DrawerSections.specificRequirements) {
+      container = SpesificRequirementsPage();
+    } else if (currentPage == DrawerSections.stakeholders) {
+      container = StakeholdersNKeyStakeholdersPage();
+    } else if (currentPage == DrawerSections.extremeProgramming) {
+      container = ExtremeProgrammingPage();
+    } else if (currentPage == DrawerSections.leanKanban) {
+      container = LeanKanbanPage();
+    } else if (currentPage == DrawerSections.pmiAcp) {
+      container = PmiACPPage();
+    } else if (currentPage == DrawerSections.headFirst) {
+      container = HeadFirstPage();
     }
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.pink[700],
-        title: Text("Fancy Cat"),
+        title: Text("Agile app"),
       ),
       body: container,
       drawer: Drawer(
@@ -83,22 +89,26 @@ class _HomePageState extends State<HomePage> {
       child: Column(
         //Show the list of menu drawer!!
         children: [
-          menuItem(1, "Dashboard", Icons.dashboard_outlined,
-              currentPage == DrawerSections.dashboard ? true : false),
-          menuItem(2, "Contacts", Icons.people_alt_outlined,
-              currentPage == DrawerSections.contacts ? true : false),
-          menuItem(3, "Events", Icons.event,
-              currentPage == DrawerSections.events ? true : false),
-          menuItem(4, "Notes", Icons.notes,
-              currentPage == DrawerSections.notes ? true : false),
-          menuItem(5, "Settings", Icons.settings_outlined,
-              currentPage == DrawerSections.settings ? true : false),
-          menuItem(6, "Notifications", Icons.notifications_outlined,
-              currentPage == DrawerSections.notifications ? true : false),
-          menuItem(7, "Privacy policy", Icons.privacy_tip_outlined,
-              currentPage == DrawerSections.privacyPolicy ? true : false),
-          menuItem(8, "Send feedback", Icons.feed_outlined,
-              currentPage == DrawerSections.sendFeedback ? true : false),
+          menuItem(1, "Scrum N Stand Up", Icons.looks_one_outlined,
+              currentPage == DrawerSections.scrum ? true : false),
+          menuItem(2, "Agile", Icons.looks_two_outlined,
+              currentPage == DrawerSections.agile ? true : false),
+          menuItem(3, "Project Management", Icons.looks_3_outlined,
+              currentPage == DrawerSections.projectManagement ? true : false),
+          menuItem(4, "Azure", Icons.looks_4_outlined,
+              currentPage == DrawerSections.azure ? true : false),
+          menuItem(5, "Specific Requirements", Icons.looks_5_outlined,
+              currentPage == DrawerSections.specificRequirements ? true : false),
+          menuItem(6, "Stakeholders and key stakeholders", Icons.looks_6_outlined,
+              currentPage == DrawerSections.stakeholders ? true : false),
+          menuItem(7, "Extreme Programming", Icons.privacy_tip_outlined,
+              currentPage == DrawerSections.extremeProgramming ? true : false),
+          menuItem(8, "Lean/Kanban", Icons.feed_outlined,
+              currentPage == DrawerSections.leanKanban ? true : false),
+          menuItem(9, "PMI/ACP exam", Icons.feed_outlined,
+              currentPage == DrawerSections.pmiAcp ? true : false),
+          menuItem(10, "Head First", Icons.feed_outlined,
+              currentPage == DrawerSections.headFirst ? true : false),
         ],
       ),
     );
@@ -112,22 +122,26 @@ class _HomePageState extends State<HomePage> {
           Navigator.pop(context);
           setState(() {
             if (id == 1) {
-              currentPage = DrawerSections.dashboard;
+              currentPage = DrawerSections.scrum;
             } else if (id == 2) {
-              currentPage = DrawerSections.contacts;
+              currentPage = DrawerSections.agile;
             } else if (id == 3) {
-              currentPage = DrawerSections.events;
+              currentPage = DrawerSections.projectManagement;
             } else if (id == 4) {
-              currentPage = DrawerSections.notes;
+              currentPage = DrawerSections.azure;
             } else if (id == 5) {
-              currentPage = DrawerSections.settings;
+              currentPage = DrawerSections.specificRequirements;
             } else if (id == 6) {
-              currentPage = DrawerSections.notifications;
+              currentPage = DrawerSections.stakeholders;
             } else if (id == 7) {
-              currentPage = DrawerSections.privacyPolicy;
+              currentPage = DrawerSections.extremeProgramming;
             } else if (id == 8) {
-              currentPage = DrawerSections.sendFeedback;
-            }
+              currentPage = DrawerSections.leanKanban;
+            }else if (id == 9) {
+              currentPage = DrawerSections.pmiAcp;
+            }else if (id == 10) {
+              currentPage = DrawerSections.headFirst;
+          }
           });
         },
         child: Padding(
@@ -160,12 +174,14 @@ class _HomePageState extends State<HomePage> {
 }
 
 enum DrawerSections {
-  dashboard,
-  contacts,
-  events,
-  notes,
-  settings,
-  notifications,
-  privacyPolicy,
-  sendFeedback,
+  scrum,
+  agile,
+  projectManagement,
+  azure,
+  specificRequirements,
+  stakeholders,
+  extremeProgramming,
+  leanKanban,
+  pmiAcp,
+  headFirst,
 }

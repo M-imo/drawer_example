@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class NotificationsPage extends StatelessWidget {
+class AzurePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
       child: Center(
-        child: Text("Notifications Page"),
+        child: Text("Azure Page"),
       ),
     );
   }

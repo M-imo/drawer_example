@@ -4,13 +4,14 @@ import 'package:drawer_example/head_first.dart';
 import 'package:drawer_example/scrumNstandUp.dart';
 import 'package:drawer_example/project_management.dart';
 import 'package:drawer_example/azure.dart';
+import 'package:drawer_example/specific_requirements.dart';
 import 'package:drawer_example/stakeholders_n_keystakeholders.dart';
 import 'package:drawer_example/extreme_programming.dart';
 import 'package:drawer_example/lean_kanban.dart';
-import 'package:drawer_example/spesific_requirements.dart';
 import 'package:flutter/material.dart';
-
 import 'my_header_drawer.dart';
+
+
 
 void main() {
   runApp(MyApp());
@@ -48,7 +49,7 @@ class _HomePageState extends State<HomePage> {
     } else if (currentPage == DrawerSections.azure) {
       container = AzurePage();
     } else if (currentPage == DrawerSections.specificRequirements) {
-      container = SpesificRequirementsPage();
+      container = SpecificRequirementsPage();
     } else if (currentPage == DrawerSections.stakeholders) {
       container = StakeholdersNKeyStakeholdersPage();
     } else if (currentPage == DrawerSections.extremeProgramming) {
@@ -56,14 +57,14 @@ class _HomePageState extends State<HomePage> {
     } else if (currentPage == DrawerSections.leanKanban) {
       container = LeanKanbanPage();
     } else if (currentPage == DrawerSections.pmiAcp) {
-      container = PmiACPPage();
+      container = PmiAcpPage();
     } else if (currentPage == DrawerSections.headFirst) {
       container = HeadFirstPage();
     }
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.pink[700],
-        title: Text("Agile app"),
+        title: const Text("Agile App"),
       ),
       body: container,
       drawer: Drawer(
@@ -87,27 +88,27 @@ class _HomePageState extends State<HomePage> {
         top: 15,
       ),
       child: Column(
-        //Show the list of menu drawer!!
+        //Showing the list of menu drawer here
         children: [
-          menuItem(1, "Scrum N Stand Up", Icons.looks_one_outlined,
+          menuItem(1, "Scrum N Stand Up", Icons.calendar_month_outlined,
               currentPage == DrawerSections.scrum ? true : false),
-          menuItem(2, "Agile", Icons.looks_two_outlined,
+          menuItem(2, "Agile", Icons.auto_mode_outlined,
               currentPage == DrawerSections.agile ? true : false),
-          menuItem(3, "Project Management", Icons.looks_3_outlined,
+          menuItem(3, "Project Management", Icons.manage_accounts_outlined,
               currentPage == DrawerSections.projectManagement ? true : false),
-          menuItem(4, "Azure", Icons.looks_4_outlined,
+          menuItem(4, "Azure", Icons.cloud_outlined,
               currentPage == DrawerSections.azure ? true : false),
-          menuItem(5, "Specific Requirements", Icons.looks_5_outlined,
+          menuItem(5, "Specific Requirements", Icons.gpp_good_outlined,
               currentPage == DrawerSections.specificRequirements ? true : false),
-          menuItem(6, "Stakeholders and key stakeholders", Icons.looks_6_outlined,
+          menuItem(6, "Stakeholders & Key stakeholders", Icons.people_alt_outlined,
               currentPage == DrawerSections.stakeholders ? true : false),
-          menuItem(7, "Extreme Programming", Icons.privacy_tip_outlined,
+          menuItem(7, "Extreme Programming", Icons.bug_report_outlined,
               currentPage == DrawerSections.extremeProgramming ? true : false),
-          menuItem(8, "Lean/Kanban", Icons.feed_outlined,
+          menuItem(8, "Lean/Kanban", Icons.border_all_rounded,
               currentPage == DrawerSections.leanKanban ? true : false),
-          menuItem(9, "PMI/ACP exam", Icons.feed_outlined,
+          menuItem(9, "PMI-ACP Exam", Icons.bookmark_added_outlined,
               currentPage == DrawerSections.pmiAcp ? true : false),
-          menuItem(10, "Head First", Icons.feed_outlined,
+          menuItem(10, "Head First", Icons.menu_book_outlined,
               currentPage == DrawerSections.headFirst ? true : false),
         ],
       ),

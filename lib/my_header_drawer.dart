@@ -22,12 +22,12 @@ class _MyHeaderDrawerState extends State<MyHeaderDrawer> {
             decoration: const BoxDecoration(
               shape: BoxShape.circle,
               image: DecorationImage(
-                image: AssetImage("assets/images/Cato.jpeg"),
+                image: AssetImage("assets/images/Arrow.jpeg"),
               ),
             ),
           ),
-          Text("Agile app", style: TextStyle(color: Colors.white, fontSize: 20),),
-          Text("Fast way to learn", style: TextStyle(color: Colors.grey[200], fontSize: 14,),),
+          Text("Agile App", style: TextStyle(color: Colors.white, fontSize: 20),),
+          Text("Overview", style: TextStyle(color: Colors.grey[200], fontSize: 14,),),
         ],
 
       ),

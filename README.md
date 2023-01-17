@@ -1,5 +1,7 @@
 # Agile App
 
+Thomas var her
+
 Welcome to the Agile App! 
 This app is designed to provide comprehensive information and resources on various agile methodologies and practices. 
 The app features 10 different pages, each focused on a specific topic:

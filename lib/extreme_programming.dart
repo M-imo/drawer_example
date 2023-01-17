@@ -4,6 +4,7 @@ class ExtremeProgrammingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const SingleChildScrollView(
+      //Branch merge test
       child: Center(
         child: Text("\n" "\n"
             "Extreme Programming (XP)"

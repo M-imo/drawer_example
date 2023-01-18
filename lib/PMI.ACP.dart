@@ -37,7 +37,7 @@ class PmiAcpPage extends StatelessWidget {
                 "\n"
                 "Sources:"
                 "\n"
-                "Stellman, A., & Greene, J. (2017). Head First Agile. O'Reilly Media, Inc."),
+                "Stellman, A. , & Greene, J. (2017). Head First Agile. O'Reilly Media, Inc."),
 
           ],
         ),

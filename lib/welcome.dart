@@ -31,7 +31,7 @@ class WelcomePage extends StatelessWidget {
                 "Agile is a project management approach developed as a more flexible and efficient way to get products to market. The word ‘agile’ refers to the ability to move quickly and easily."
                      " \n"  " \n"
                     "This guide will explain the Agile methodology, which projects will benefit from an Agile approach, "
-                    "and how to implement one effectively. "
+                    "and how to implement one effectively."
                 , style: TextStyle(fontSize: 20),  textAlign: TextAlign.center,),
             )),
           Container(color: Colors.pink[700], child: Text("To start tap on icon in the upper left corner ", maxLines: 2,   textAlign: TextAlign.center, style: TextStyle( color: Colors.white, fontSize: 23, fontWeight: FontWeight.bold))),

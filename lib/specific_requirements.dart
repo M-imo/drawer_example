@@ -1,38 +1,154 @@
-
-
 import 'package:flutter/material.dart';
 
 class SpecificRequirementsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return const SingleChildScrollView(
-      child: Center(
-        child: Text("\n"
-            "\n"
-            "Specific Requirements  \n" "\n"
-            "A requirement specification (or requirements specification) in software engineering, is a documentation (usually part of a project description) that identifies the requirements for a software system. "
-            "The purpose of a requirement specification is to establish agreement between stakeholders about what the system should do and what the system should not do. "
-            "A requirements specification typically includes a detailed description of the system's functional and non-functional requirements, and may also include a set of use cases that describe how the system should respond to particular inputs.\n"
-            "\n"
-            "Sources: \n"
-            "ChatGTP. (2020). ChatGTP. Retrieved 15.01.2023 from https://www.chatgtp.com/."
-            ""),
+    return Scaffold(
+
+        body: SingleChildScrollView(
+
+          child: Column(
+
+
+              children: [
+
+                Stack(
+
+
+                    children:[
+                      Container(
+
+
+                        margin: EdgeInsets.all(00.0),
+
+
+                        child: Image.asset('assets/Specificrequirementsheader.png', height: 300, width: double.infinity, fit: BoxFit.cover,),
+
+                      ),
+
+
+                      Container(
+                        padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
+                        margin: EdgeInsets.all(2.0),
+                        alignment: Alignment.topLeft,
 
 
 
-        child: Text("\n"
-            "\n"
-            "Specific Requirements: The Team  \n" "\n"
-            "is often expected to come up with a near- perfect requirements document and design before they start building code."
-            "because it takes a lot of time and effort to go back and fix the requirements and design when the team finds problems with them.
-        "
-            "A requirements specification typically includes a detailed description of the system's functional and non-functional requirements, and may also include a set of use cases that describe how the system should respond to particular inputs.\n"
-            "\n"
-            "Sources: \n"
-            "Head First: Agile. (2017), Page 67." "\n"
-            "Simplified by: Chatgpt"),
-      ),
-    );
+                        child: const Text(
+
+                          "Agile req. gathering, doc, prioritizes customer needs in Agile dev. Flexible, adaptable, collab. process, prioritized using backlog grooming. \n"
+                              "Goal: MVP asap w/ feedback & changing req.",
+
+
+                          style: TextStyle(fontSize: 40.0,color:Colors.white ,fontWeight: FontWeight.bold),
+                        ),
+
+
+
+                      ),
+                    ]
+
+                ),
+                Stack(
+                    children: [
+                      Container(
+                        padding: EdgeInsets.symmetric(vertical: 1.0, horizontal: 1.0),
+                        margin: EdgeInsets.all(5.0),
+
+
+
+                        alignment: Alignment.center,
+                        width: double.infinity,
+                        height: 260
+
+                        ,
+
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+
+                          border: Border.all(width: 4, color: Colors.white),
+                          borderRadius: BorderRadius.all(Radius.circular(10)),
+                        ),
+
+                        child: const SelectableText(
+
+
+                          "\n \n \n In Agile specific requirements, the team works closely with the customer to gather and define requirements for the project. \n" "The customer, usually a product owner, prioritizes the requirements and communicates them to the development team.",
+
+                          style: TextStyle(fontSize: 20.0),
+                        ),
+
+
+                      ), Container(
+                        padding: EdgeInsets.symmetric(vertical: 9.0, horizontal: 5.0),
+                        margin: EdgeInsets.all(2.0),
+                        alignment: Alignment.topLeft,
+
+                        child: const Text(
+
+                          "Agile Requirements Gathering and Prioritization",
+
+                          style: TextStyle(fontSize: 30.0),
+                        ),
+                      ),]
+                ),
+
+
+
+
+                Stack(
+
+
+                    children:[
+                      Container(
+                        padding: EdgeInsets.symmetric(vertical: 1.0, horizontal: 1.0),
+                        margin: EdgeInsets.all(5.0),
+
+
+                        alignment: Alignment.center,
+                        width: double.infinity,
+                        height: 300
+
+                        ,
+
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+
+                          border: Border.all(width: 4, color: Colors.white),
+                          borderRadius: BorderRadius.all(Radius.circular(10)),
+                        ),
+
+                        child: const Text(
+
+                          "Once the requirements have been gathered, the customer then prioritizes them according to the needs of the project.\n"
+                              " This can be done through a process called 'backlog grooming',\n where the customer and development team review the requirements together and decide which ones are most important to work on first. , "
+                          ,
+
+                          style: TextStyle(fontSize: 20.0),
+                        ),
+
+                      ),
+
+
+                      Container(
+                        padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
+                        margin: EdgeInsets.all(2.0),
+                        alignment: Alignment.topLeft,
+
+                        child: const Text(
+
+                          "Prioritizing Requirements through Backlog Grooming",
+
+                          style: TextStyle(fontSize: 30.0),
+                        ),
+                      ),
+                    ]
+
+                ),
+              ]
+          ),
+
+
+        ));
   }
 }
-

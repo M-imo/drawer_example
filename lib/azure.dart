@@ -25,7 +25,7 @@ class AzurePage extends StatelessWidget {
                           "Additionally, Azure provides advanced security features, such as data encryption and identity and access management, to help ensure data is secure.\n" "\n"
                           "Sources:\n"
                           "ChatGTP. (2020). ChatGTP. Retrieved 15.01.2023 from https://www.chatgtp.com/."
-                          "", style: TextStyle(fontSize:25 , color: Colors.white)),
+                          "",   textAlign: TextAlign.center, style: TextStyle(fontSize:25 , color: Colors.white,)),
                 ),
               ),
             ],

@@ -8,6 +8,7 @@ import 'package:drawer_example/specific_requirements.dart';
 import 'package:drawer_example/stakeholders_n_keystakeholders.dart';
 import 'package:drawer_example/extreme_programming.dart';
 import 'package:drawer_example/lean_kanban.dart';
+import 'package:drawer_example/welcome.dart';
 import 'package:flutter/material.dart';
 import 'my_header_drawer.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -36,13 +37,15 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  var currentPage = DrawerSections.scrum;
+  var currentPage = DrawerSections.landing;
 
   @override
   Widget build(BuildContext context) {
     var container;
     if (currentPage == DrawerSections.scrum) {
       container = ScrumNStandUpPage();
+    } else if (currentPage == DrawerSections.landing) {
+      container = WelcomePage();
     } else if (currentPage == DrawerSections.agile) {
       container = AgilePage();
     } else if (currentPage == DrawerSections.projectManagement) {
@@ -91,6 +94,8 @@ class _HomePageState extends State<HomePage> {
       child: Column(
         //Showing the list of menu drawer here
         children: [
+          menuItem(0, "Welcome", Icons.home,
+              currentPage == DrawerSections.landing ? true : false),
           menuItem(1, "Scrum N Stand Up", Icons.calendar_month_outlined,
               currentPage == DrawerSections.scrum ? true : false),
           menuItem(2, "Agile", Icons.auto_mode_outlined,
@@ -123,6 +128,9 @@ class _HomePageState extends State<HomePage> {
         onTap: () {
           Navigator.pop(context);
           setState(() {
+            if (id == 0) {
+              currentPage = DrawerSections.landing;
+            }
             if (id == 1) {
               currentPage = DrawerSections.scrum;
             } else if (id == 2) {
@@ -176,6 +184,7 @@ class _HomePageState extends State<HomePage> {
 }
 
 enum DrawerSections {
+  landing,
   scrum,
   agile,
   projectManagement,
